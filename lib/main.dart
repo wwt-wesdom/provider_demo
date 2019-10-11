@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_demo/provider_one.dart';
 import 'package:provider_demo/home_page.dart';
+import 'package:provider_demo/shop_cart_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider.value(value: 48),
-        ChangeNotifierProvider.value(value: CounterModel())
+        ChangeNotifierProvider.value(value: CounterModel()),
+        ChangeNotifierProvider.value(value: ShopCartModel())
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
